@@ -1,5 +1,6 @@
 ﻿namespace NServiceBus.DataBus
 {
+    using System;
     using System.IO;
     using System.Runtime.Serialization.Formatters.Binary;
 
@@ -25,15 +26,15 @@
         /// <summary>
         /// Deserializes the property.
         /// </summary>
-        public object Deserialize(Stream stream)
+        public object Deserialize(Type propertyType, Stream stream)
         {
             return formatter.Deserialize(stream);
         }
 
         /// <summary>
-        /// The name of this serializer. Used to populate the NServiceBus.Databus.Serializer header.
+        /// The content type this serializer handles. Used to populate the <see cref="Headers.DataBusContentType"/> header.
         /// </summary>
-        public string ContentType { get; } = "binary-formatter";
+        public string ContentType { get; } = "application/octet-stream";
 
         static BinaryFormatter formatter = new BinaryFormatter();
     }
