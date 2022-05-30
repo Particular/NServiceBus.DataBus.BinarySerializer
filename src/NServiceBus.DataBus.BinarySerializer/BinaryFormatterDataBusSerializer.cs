@@ -11,8 +11,8 @@
     /// </summary>
     [ObsoleteEx(
         Message = "The BinaryFormatter is a security vurnerability and should not be used. Use the JsonDataBusSerializer instead.",
-        TreatAsErrorFromVersion = "1.0",
-        RemoveInVersion = "2.0")]
+        TreatAsErrorFromVersion = "2.0",
+        RemoveInVersion = "3.0")]
     public class BinaryFormatterDataBusSerializer : IDataBusSerializer
     {
         /// <summary>
