@@ -32,7 +32,7 @@
         }
 
         /// <summary>
-        /// The content type this serializer handles. Used to populate the <see cref="Headers.DataBusContentType"/> header.
+        /// The content type this serializer handles. Used to populate the <see cref="Headers.DataBusConfigContentType"/> header.
         /// </summary>
         public string ContentType { get; } = "application/octet-stream";
 
