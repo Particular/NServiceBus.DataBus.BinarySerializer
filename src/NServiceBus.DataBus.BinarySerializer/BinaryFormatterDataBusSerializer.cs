@@ -10,7 +10,7 @@
     /// Data bus serialization using <see cref="BinaryFormatter" />.
     /// </summary>
     [ObsoleteEx(
-        Message = "The BinaryFormatter is a security vurnerability and should not be used. Use the JsonDataBusSerializer instead.",
+        Message = "The BinaryFormatter is a security vulnerability and should not be used. Use the JsonDataBusSerializer instead.",
         TreatAsErrorFromVersion = "2.0",
         RemoveInVersion = "3.0")]
     public class BinaryFormatterDataBusSerializer : IDataBusSerializer
